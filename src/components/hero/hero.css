@@ -39,7 +39,7 @@
 
 .hTitle{
     margin-top: 50px;
-    font-size: 100px;
+    font-size: 50px;
     color: yellow;
 }
 
@@ -150,12 +150,12 @@
     text-align: center;
     line-height: 24px;
     font-weight: 300;
-    color: white;
+    color: #ddd;
 }
 
 .certificate img{
-    width: 70%;
-    height: 70%;
+    width: 70px;
+    height: 70px;
 }
 
 .contactLink{
@@ -181,6 +181,85 @@
     margin: auto;
     width: 80px;
     height: 80px;
-    background-color: white;
     justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+@media (max-width:1536px){
+    .hTitle{
+        font-size: 72px;
+    }
+}
+
+@media (max-width:1280px){
+    .bg{
+        font-size: 60%;
+        top: auto;
+        bottom: 0;
+    }
+
+    .hImg{
+        height: 100%;
+    }
+
+    .hTitle{
+        font-size: 88px;
+    }
+
+    .awards{
+        width: 60%;
+    }
+
+    .bubbleContainer{
+        width: 100%;
+    }
+}
+
+@media (max-width:1024px){
+    .bg{
+        height: 50%;
+    }
+
+    .hTitle{
+        font-size: 72px;
+    }
+}
+
+@media (max-width:768px){
+    .hero{
+        flex-direction: column;
+    }
+
+    .bg{
+        height: 60%;
+    }
+    
+    .hSection{
+        width: 100%;
+    }
+
+
+    .hSection.left{
+        align-items: center;
+        text-align: center;
+        gap : 36px;
+    }
+
+    .hTitle{
+        font-size: 48px;
+    }
+
+    .awards{
+        width: 100%;
+    }
+    .awardList{
+        justify-content: center;
+    }
+    .hSection.right{
+        justify-content: end;
+    }
+    .follow, .bubbleContainer, .certificate{
+        display: none;
+    }
 }
