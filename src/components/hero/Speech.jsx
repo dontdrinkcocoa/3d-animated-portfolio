@@ -23,7 +23,7 @@ const Speech = () => {
       repeat={Infinity}
     />
         </div>
-        <img src="/man.png" alt="" className="bubbleImg" />
+        <img src="/hero_m.png" alt="" className="bubbleImg" />
     </motion.div>
   )
 }

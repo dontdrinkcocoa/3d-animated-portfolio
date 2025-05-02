@@ -58,7 +58,7 @@ const Hero = () => {
           animate="animate"
           className="awards"
         >
-          <motion.h2 variants={awardVariants}>Excellent Home Protector</motion.h2>
+          <motion.h2 variants={awardVariants}>Home Protector</motion.h2>
           <motion.p variants={awardVariants}>Art&Tech and AI in Sogang Univ.</motion.p>
           <motion.div variants={awardVariants} className="awardlist">
             <motion.img variants={awardVariants} src="/award1.png" alt="" />
@@ -159,7 +159,7 @@ const Hero = () => {
           </Suspense>
         </Canvas>
         <div className="hImg">
-          <img src="/hero.png" alt="" />
+          <img src="/hero_m.png" alt="" />
         </div>
       </div>
     </div>

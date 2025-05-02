@@ -7,7 +7,8 @@ const MingiModelContainer = () => {
   return (
     <Canvas>
         <Suspense fallback='Loading...'>
-            <Stage environment="city">
+            <Stage environment="city" intensity={0.5} shadows={false}>
+                <PerspectiveCamera makeDefault position={[0, 0, 5]} fov={25} />
                 <MingiModel/>
             </Stage>
             <OrbitControls enableZoom={false} enablePan={false} autoRotate autoRotateSpeed={1} />
