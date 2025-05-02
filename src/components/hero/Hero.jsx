@@ -2,6 +2,9 @@ import { animate, stagger } from "motion";
 import "./hero.css";
 import Speech from "./Speech";
 import { motion } from "motion/react";
+import Shape from "./Shape";
+import { Suspense } from "react";
+import { Canvas } from "@react-three/fiber";
 
 const awardVariants = {
   initial: {
@@ -56,7 +59,7 @@ const Hero = () => {
           className="awards"
         >
           <motion.h2 variants={awardVariants}>Excellent Home Protector</motion.h2>
-          <motion.p variants={awardVariants}>Art&Tech / AI in Sogang Univ.</motion.p>
+          <motion.p variants={awardVariants}>Art&Tech and AI in Sogang Univ.</motion.p>
           <motion.div variants={awardVariants} className="awardlist">
             <motion.img variants={awardVariants} src="/award1.png" alt="" />
             <motion.img variants={awardVariants} src="/award2.png" alt="" />
@@ -150,6 +153,11 @@ const Hero = () => {
 
       <div className="bg">
         {/* 3D */}
+        <Canvas>
+          <Suspense fallback="Loading...">
+            <Shape />
+          </Suspense>
+        </Canvas>
         <div className="hImg">
           <img src="/hero.png" alt="" />
         </div>
