@@ -1,7 +1,9 @@
-import { stagger } from "motion";
+import { stagger } from "framer-motion";
+import { useState } from "react";
 import Counter from "./Counter";
 import { MingiModel } from "./mingi/MingiModel";
 import MingiModelContainer from "./mingi/MingiModelContainer";
+import BumperModelContainer from "./Bumper/BumperModelContainer";
 import "./services.css";
 import { motion } from "motion/react";
 import { useInView } from "framer-motion";
@@ -106,7 +108,7 @@ const Services = () => {
         </div>
       </div>
       <div className="sSection right">{
-        currentServiceId === 1 ? (<MingiModelContainer />) : currentServiceId === 2 ? (<MingiModelContainer />) : (<MingiModelContainer />)}
+        currentServiceId === 1 ? (<MingiModelContainer />) : currentServiceId === 2 ? (<BumperModelContainer />) : (<MingiModelContainer />)}
       </div>
     </div>
   )
