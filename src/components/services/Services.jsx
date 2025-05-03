@@ -62,6 +62,7 @@ const services = [
 ]
 
 const Services = () => {
+  const [currentServiceId, setCurrentServiceId] = useState(1);
   const ref = useRef();
   const isInView = useInView(ref, {margin: "-200px"})
   return (
@@ -83,7 +84,10 @@ const Services = () => {
           {services.map((service) => (
             <motion.div 
             variants={listVariants} 
-            className="service" key={service.id}>
+            className="service" 
+            key={service.id}
+            onClick={() => setCurrentServiceId(service.id)}
+            >
               <div className="serviceIcon">
                 <img src={service.img} alt="" />
               </div>
@@ -101,8 +105,8 @@ const Services = () => {
           <Counter from={0} to= {72} text="Happy Clients"/>
         </div>
       </div>
-      <div className="sSection right">
-        <MingiModelContainer/>
+      <div className="sSection right">{
+        currentServiceId === 1 ? (<MingiModelContainer />) : currentServiceId === 2 ? (<MingiModelContainer />) : (<MingiModelContainer />)}
       </div>
     </div>
   )
