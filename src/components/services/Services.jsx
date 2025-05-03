@@ -9,6 +9,10 @@ import { motion } from "motion/react";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 
+import { EffectComposer, Bloom, Noise, Vignette } from "@react-three/postprocessing";
+import { BlendFunction } from 'postprocessing'
+
+
 
 const textVariants = {
   initial: {
@@ -107,9 +111,9 @@ const Services = () => {
           <Counter from={0} to= {72} text="Happy Clients"/>
         </div>
       </div>
-      <div className="sSection right">{
-        currentServiceId === 1 ? (<MingiModelContainer />) : currentServiceId === 2 ? (<BumperModelContainer />) : (<MingiModelContainer />)}
-      </div>
+        <div className="sSection right">{
+          currentServiceId === 1 ? (<MingiModelContainer />) : currentServiceId === 2 ? (<BumperModelContainer />) : (<MingiModelContainer />)}
+        </div>
     </div>
   )
 }

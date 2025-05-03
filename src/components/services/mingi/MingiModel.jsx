@@ -9,7 +9,7 @@ export function MingiModel() {
         castShadow
         receiveShadow
         //rotation-y={Math.PI}
-        position={[1, 0, 1]}
+        position={[2, 0, 2]}
 
       />
     </group>
