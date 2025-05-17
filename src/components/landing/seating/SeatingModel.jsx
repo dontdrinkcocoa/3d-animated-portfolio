@@ -1,7 +1,7 @@
 import { useGLTF } from '@react-three/drei';
 
 export function SeatingModel() {
-  const seating = useGLTF('Seating.glb');
+  const seating = useGLTF('Seating5.glb');
   return (
     <group>
       <primitive
@@ -10,11 +10,10 @@ export function SeatingModel() {
         receiveShadow
         //rotation-y={Math.PI}
         position={[0, 0, 0]}
-        rotation={[0, Math.PI / -2, 0]} 
 
       />
     </group>
   );
 }
 
-useGLTF.preload('Seating.glb');
+useGLTF.preload('Seating5.glb');
