@@ -5,6 +5,7 @@
 
 import {lazy} from 'react';
 
+const Landing = lazy(() => import('./components/landing/Landing'));
 const Hero = lazy(() => import('./components/hero/Hero'));
 const Services = lazy(() => import('./components/services/Services'));
 const Portfolio = lazy(() => import('./components/portfolio/Portfolio'));
@@ -14,6 +15,9 @@ const Contact = lazy(() => import('./components/contact/Contact'));
 const App = () => {
   return (
     <div className='container'>
+      <section id = "#home">
+        <Landing/>
+      </section>
       <section id = "#home">
         <Hero/>
       </section>
