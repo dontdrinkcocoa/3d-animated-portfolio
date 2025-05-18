@@ -24,23 +24,25 @@ const App = () => {
   };
 
   return (
-    <div className='container'>
-      <div className="music-toggle" onClick={toggleMusic}>
-        {isPlaying ? '🔊' : '🔇'}
+    <div className="App">
+        <section id="#home">
+          <Landing />
+        </section>
+      <div className='container'>
+        <div className="music-toggle" onClick={toggleMusic}>
+          {isPlaying ? '🔊' : '🔇'}
+        </div>
+        <section id="#home">
+          <Hero />
+        </section>
+        <section id="#services">
+          <Services />
+        </section>
+        <Portfolio />
+        <section id="#contact">
+          <Contact />
+        </section>
       </div>
-      <section id="#home">
-        <Landing />
-      </section>
-      <section id="#home">
-        <Hero />
-      </section>
-      <section id="#services">
-        <Services />
-      </section>
-      <Portfolio />
-      <section id="#contact">
-        <Contact />
-      </section>
     </div>
   );
 };

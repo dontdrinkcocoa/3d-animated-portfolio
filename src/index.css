@@ -8,10 +8,11 @@ html {
     scroll-snap-type: y mandatory;
     scroll-behavior: smooth;
     overflow-y: scroll;
+    overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
 body {
-    background: linear-gradient(to bottom, #09051d, #2b3756);
+    background: linear-gradient(to bottom, #09051d, #1f2b4a);
     color: white;
     font-family: "DynaPuff", system-ui;
     font-optical-sizing: auto;
@@ -38,6 +39,27 @@ a {
 section{
     height: 100vh;
     scroll-snap-align: center;
+}
+
+.music-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  background-color: #444;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 1000;
+  transition: background-color 0.3s;
+}
+
+.music-toggle:hover {
+  background-color: #666;
 }
 
 
