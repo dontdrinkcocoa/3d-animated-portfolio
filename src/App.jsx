@@ -1,9 +1,7 @@
-// import Hero from './components/hero/Hero'
-// import Services from './components/services/Services'
-// import Portfolio from './components/portfolio/Portfolio'
-// import Contact from './components/contact/Contact'
+// Import necessary hooks and assets
+import { useState, useRef } from 'react';
+import { lazy } from 'react';
 
-import {lazy} from 'react';
 
 const Landing = lazy(() => import('./components/landing/Landing'));
 const Hero = lazy(() => import('./components/hero/Hero'));
@@ -11,27 +9,40 @@ const Services = lazy(() => import('./components/services/Services'));
 const Portfolio = lazy(() => import('./components/portfolio/Portfolio'));
 const Contact = lazy(() => import('./components/contact/Contact'));
 
-
 const App = () => {
+  const [isPlaying, setIsPlaying] = useState(false);
+  const audioRef = useRef(new Audio('/background.mp3'));
+
+  const toggleMusic = () => {
+    if (isPlaying) {
+      audioRef.current.pause();
+    } else {
+      audioRef.current.play();
+      audioRef.current.loop = true;
+    }
+    setIsPlaying(!isPlaying);
+  };
+
   return (
     <div className='container'>
-      <section id = "#home">
-        <Landing/>
+      <div className="music-toggle" onClick={toggleMusic}>
+        {isPlaying ? '🔊' : '🔇'}
+      </div>
+      <section id="#home">
+        <Landing />
       </section>
-      <section id = "#home">
-        <Hero/>
+      <section id="#home">
+        <Hero />
       </section>
-      <section id = "#services">
-        <Services/>
+      <section id="#services">
+        <Services />
       </section>
-      {/* <section id = "#portfolio"> */}
-        <Portfolio/>
-      {/* </section> */}
-      <section id = "#contact">
-        <Contact/>
+      <Portfolio />
+      <section id="#contact">
+        <Contact />
       </section>
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;
