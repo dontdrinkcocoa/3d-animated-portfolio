@@ -1,7 +1,16 @@
 .landing {
-    position: absolute;
-    height: 100vh;
-    width: 100vw;
-    overflow: hidden;
-    display: flex;
+  position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.seating_container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 300px;
 }

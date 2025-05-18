@@ -1,0 +1,10 @@
+@font-face {
+  font-family: 'Hakgyoansim Nadeuri';
+  src: url('/Hakgyoansim Nadeuri TTF B.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body, html, * {
+  font-family: 'Hakgyoansim Nadeuri', sans-serif;
+}

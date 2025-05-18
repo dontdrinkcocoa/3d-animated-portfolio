@@ -10,10 +10,10 @@ const SeatingModelContainer = () => {
   return (
     <Canvas>
         <Suspense fallback='Loading...'>
-            <Stage adjustCamera={false} environment={"night"}  shadows= {false}>
+            <Stage adjustCamera={false} environment={"night"} shadows= {false} intensity={0.5} contactShadow={false} >
                 <SeatingModel position={[0, 0, 0]}/>
             </Stage>
-            <OrbitControls enableZoom={false} enablePan={false} />
+            <OrbitControls enableZoom={false} enablePan={false} target0={[0, -1, 0]}/>
             <PerspectiveCamera makeDefault position={[0, 2, 6]} fov={50} near={0.1} far={1000} />
         </Suspense>
         <EffectComposer>

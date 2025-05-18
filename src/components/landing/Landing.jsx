@@ -1,15 +1,13 @@
-
-import { OrbitControls, useGLTF } from '@react-three/drei';
 import { Suspense } from 'react';
 import SeatingModelContainer from "./seating/SeatingModelContainer";
-
+import "./landing.css";
 
 const Landing = () => {
   return (
-    <div style={{ height: '100vh', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-
-
-          <SeatingModelContainer />
+    <div className='landing'>
+      <div className="seating_container">
+        <SeatingModelContainer positionY={10} /> {/* Adjust this value to move down/up */}
+      </div>
     </div>
   );
 };
