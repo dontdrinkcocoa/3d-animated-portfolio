@@ -11,7 +11,7 @@ export function SeatingModel() {
   useFrame(() => {
   if (modelRef.current) {
     const elapsed = clock.getElapsedTime();
-    modelRef.current.position.y = -0.4 -Math.sin(elapsed) * 0.2;
+    modelRef.current.position.y = -0.4 -Math.sin(elapsed) * 0.1;
     //modelRef.current.rotation.y += 0.01; 
   }
 });

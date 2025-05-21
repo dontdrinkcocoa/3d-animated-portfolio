@@ -8,8 +8,9 @@ import { BlendFunction } from 'postprocessing';
 const SeatingModelContainer = () => {
   return (
     <Canvas style={{ width: "100vw", height: "100vh" }}>
-      <ambientLight intensity={0.7} />
-      <directionalLight position={[5, 15, -5]} intensity={0.6} />
+      <directionalLight position={[5, 10, 5]} intensity={0.5} />
+      <ambientLight intensity={1.0} />
+      
 
       <Suspense fallback={null}>
         {/* HDRI Background */}
@@ -24,6 +25,7 @@ const SeatingModelContainer = () => {
             'cubeMap/nz.png'
           ]}
           path="/"
+
         />
 
         {/* 3D Model */}
@@ -44,10 +46,10 @@ const SeatingModelContainer = () => {
       <EffectComposer>
         <Bloom 
           mipmapBlur 
-          intensity={0.5} 
-          luminanceThreshold={0.8} 
-          luminanceSmoothing={0.9} 
-          height={50} 
+          intensity={0.4} 
+          luminanceThreshold={0.6} 
+          luminanceSmoothing={0.6} 
+          height={0.5} 
           blendFunction={BlendFunction.SCREEN} 
         />
         <Vignette eskil={false} offset={0.1} darkness={1.2} blendFunction={BlendFunction.NORMAL} />
